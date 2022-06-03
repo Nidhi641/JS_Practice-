@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+
+    <!-- This style tag used for adding CSS properties -->
+    <style>
+        .container{
+            width: 320px;
+            height: 440px;
+            border: 2px solid black;
+            text-align: center;
+            margin: 60px auto;
+        }
+        .container form input{
+            width: 100px;
+            height: 60px;
+            margin-left: px;
+            font-size: 30px;
+            background-color: darkolivegreen;
+            color: white;
+        } 
+    </style>
+
+</head>
+
+<body>
+
+    <div style="background-color: rgb(184, 184, 207);" class="container" >
+        <form name="forms" >
+            <h1>Find Factorial...😇</h1>
+            <input id="inp" style="width:312px; height:30px; background-color: powderblue; color: black;" type="text"  name="ans" placeholder="0" >
+
+            <br><br>
+
+            <input type="button" value="1" onclick="forms.ans.value += '1'">
+            <input type="button" value="2" onclick="forms.ans.value += '2'">
+            <input type="button" value="3" onclick="forms.ans.value += '3'">
+
+            <br><br>
+
+            <input type="button" value="4" onclick="forms.ans.value += '4'">
+            <input type="button" value="5" onclick="forms.ans.value += '5'">
+            <input type="button" value="6" onclick="forms.ans.value += '6'">
+
+            <br><br>
+
+            <input type="button" value="7" onclick="forms.ans.value += '7'">
+            <input type="button" value="8" onclick="forms.ans.value += '8'">
+            <input type="button" value="9" onclick="forms.ans.value += '9'">
+
+            <br><br>
+            
+            <input type="button" value="0" onclick="forms.ans.value += '0'">
+            <input type="button" value="=" onclick="Fact()">
+            <input style="background-color:red;" type="reset" value="C">
+
+        </form>
+    </div>
+
+    <!-- This script tag is used for adding Javascript. -->
+    <script>
+        
+
+        // clr() function created for clear the data from input field.
+        // function clr(){
+        //     Box=document.getElementById("i");
+        //     Box.document.getElementById.innerHTML = " ";
+        // }
+
+        // Fact() function created for calculate the factorial of input.
+        function Fact(){
+            let f = 1;
+            for(let i = forms.ans.value; i>0; i--){
+                f = f*i;  
+            }
+            forms.ans.value = f;
+        }
+    </script>
+
+</body>
+</html>
